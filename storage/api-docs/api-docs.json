@@ -1,0 +1,62 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Dummy API",
+        "description": "",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost/dummy-api/api",
+            "description": "API Server"
+        }
+    ],
+    "paths": {
+        "/financial-terms": {
+            "get": {
+                "tags": [
+                    "Financial Terms"
+                ],
+                "summary": "Financial Terms related API",
+                "operationId": "financialTermsList",
+                "responses": {
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "200": {
+                        "description": "Successful"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "name": "bearerAuth",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Rentalhomebd Project",
+            "description": "API Endpoints of Rentalhomebd Project"
+        }
+    ],
+    "security": [
+        []
+    ]
+}
